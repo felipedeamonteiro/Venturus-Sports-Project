@@ -1,0 +1,18 @@
+//Mixins usados no meu Sass
+@mixin orinetacao-padrao($justi: space-between){
+    display: flex;
+    align-items: center;
+    justify-content: $justi;
+}
+@mixin cursor($tipo: pointer){
+    cursor:$tipo;
+}
+
+//placeholders
+%semfunor {
+    outline: none;
+}
+
+%semunderline{
+    text-decoration: none;
+}

@@ -1,0 +1,182 @@
+/*-----------------------------------------------*/
+/*Esta é a parte onde Arrumo o Cabeçalho apenas*/
+/*-----------------------------------------------*/
+
+/*Começo da Primeira DIV*/
+header img, h3, div, button{
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-square {
+    color:$cor-padrao;
+    padding-left: 20px;
+    font-size: 60px;
+}
+.titulo{
+    padding-left: 10px;
+}
+.fa-square, .titulo, .iniciais-usuario, .buttonu{
+    display: inline-block;
+    vertical-align:middle;
+}
+
+.iniciais-usuario{
+    clear: left;
+    border: 1px solid #000000;
+    background:#fff;
+    color:#000;
+    width:30px;
+    height:30px;
+    line-height:30px;
+    vertical-align:middle;
+    text-align:center;
+    font-size:16px;
+    border-radius:50%;
+    @include cursor;
+}
+.cabecalho .container1{
+    @include orinetacao-padrao;
+}
+.fa-angle-down, .buttonu{
+    vertical-align:middle;
+}
+
+.fa-angle-down{
+    float: right;
+    color: #000;
+    font-size: 16px;
+    margin-left: 10px;
+}
+/*Dropdown menu-------------------------------------*/
+.direita{
+    padding-right: 40px;
+    width: 215px;
+}
+.buttonu{
+    float: left;
+    border: none;
+    background-color: white;
+    @include cursor;
+    @extend %semfunor;
+    padding: 0 0 0 11px;
+}
+
+.dropdown {
+  display: inline-grid;
+  width: 135px;
+}
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  width: 159px;
+  height: 171px;
+  top: 60px;
+  margin-left: -2%;
+  float: right;
+  overflow: auto;
+  box-shadow: 0px 1px 20px 2px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.topd {
+    padding-top: 5px;
+}
+
+.drpline{
+    border-width: 0 0 1px 0;
+    color:$cor-aux2;
+    margin: 10px 0 5px 0;
+}
+.dropdown-content a {
+  color: black;
+  padding: 10px 0 6px 14px;
+  text-decoration: none;
+  display: block;
+  @include cursor;
+  font-size: 12px;
+}
+
+.dropdown a:hover {
+    background-color: $cor-auxiliar;
+    color: $cor-padrao;
+
+}
+
+.show {display: block;}
+/*Fim da Primeira DIV*/
+/*-----------------------------------------------*/
+/*Começo da Segunda DIV - Page Path*/
+.fa-home, .dots{
+    color:$cor-padrao;
+    font-size: 14px;
+}
+.fa-angle-right{
+    color: $cor-aux2;
+}
+.dots{
+    @extend %semunderline;
+    color: $corpreta;
+}
+.pagen{
+    font-size: 11px;
+    @extend %semunderline;
+    color: $corpreta;
+}
+.pagen, .dots, .fa-home{
+    @include cursor;
+}
+.pagen:hover, .dots:hover{
+    color: $cor-padrao;
+}
+.cont2{
+    display: inline-block;
+    align-items: left;
+    padding: 10px 0px 10px 20px;
+}
+.exten {
+    background-color: $cor-aux3;
+}
+.fa-home, .fa-angle-right, .pagen, .dots{
+    margin-right: 10px;
+}
+/*Fim da Segunda DIV*/
+/*-------------------------------------------------*/
+/*Começo da Terceira DIV - Sport Type*/
+.cont3{
+    @include orinetacao-padrao;
+    padding: 30px 15px;
+    background-color: #BAEBE1;
+}
+.fa-map-signs, .fa-trophy{
+    color:$cor-padrao;
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left: 45px;
+}
+/*O "!important" foi usado porque de alguma maneira a fonte padrão do FontAwesome 4 estava barrando esta formatação que eu coloquei anteriormente*/
+.fa-puzzle-piece{
+    color:$cor-padrao;
+    font-size: 30px !important;
+    margin-right: 20px;
+}
+.cont2esq {
+    @include orinetacao-padrao;
+}
+.sport-type, .mode, .route{
+    grid:auto / auto auto;
+    display:grid;
+}
+.cable1{
+    font-size: 11px;
+    color: $cor-aux2;
+    @extend %semunderline;
+}
+.cable2{
+    font-size: 18px;
+    font-weight: bold;
+    @extend %semunderline;
+    color: $corpreta;
+}
+
+/*-------------------------------------------------*/
+/*Fim do Header*/

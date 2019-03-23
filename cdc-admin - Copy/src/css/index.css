@@ -1,0 +1,516 @@
+@charset "UTF-8";
+.buttonu, .filtro, #username, #name, #email, #city, #save, #discard {
+  outline: none; }
+
+.dots, .pagen, .cable1, .cable2 {
+  text-decoration: none; }
+
+/*Geral*/
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 14px; }
+
+/*-----------------------------------------------*/
+/*Esta ├⌐ a parte onde Arrumo o Cabe├ºalho apenas*/
+/*-----------------------------------------------*/
+/*Come├ºo da Primeira DIV*/
+header img, h3, div, button {
+  justify-content: center;
+  align-items: center; }
+
+.fa-square {
+  color: #43c5c5;
+  padding-left: 20px;
+  font-size: 60px; }
+
+.titulo {
+  padding-left: 10px; }
+
+.fa-square, .titulo, .iniciais-usuario, .buttonu {
+  display: inline-block;
+  vertical-align: middle; }
+
+.iniciais-usuario {
+  clear: left;
+  border: 1px solid #000000;
+  background: #fff;
+  color: #000;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer; }
+
+.cabecalho .container1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.fa-angle-down, .buttonu {
+  vertical-align: middle; }
+
+.fa-angle-down {
+  float: right;
+  color: #000;
+  font-size: 16px;
+  margin-left: 10px; }
+
+/*Dropdown menu-------------------------------------*/
+.direita {
+  padding-right: 40px;
+  width: 215px; }
+
+.buttonu {
+  float: left;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding: 0 0 0 11px; }
+
+.dropdown {
+  display: inline-grid;
+  width: 135px; }
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  width: 159px;
+  height: 171px;
+  top: 60px;
+  margin-left: -2%;
+  float: right;
+  overflow: auto;
+  box-shadow: 0px 1px 20px 2px rgba(0, 0, 0, 0.2);
+  z-index: 1; }
+
+.topd {
+  padding-top: 5px; }
+
+.drpline {
+  border-width: 0 0 1px 0;
+  color: #99999d;
+  margin: 10px 0 5px 0; }
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 0 6px 14px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  font-size: 12px; }
+
+.dropdown a:hover {
+  background-color: #e6e6e6;
+  color: #43c5c5; }
+
+.show {
+  display: block; }
+
+/*Fim da Primeira DIV*/
+/*-----------------------------------------------*/
+/*Come├ºo da Segunda DIV - Page Path*/
+.fa-home, .dots {
+  color: #43c5c5;
+  font-size: 14px; }
+
+.fa-angle-right {
+  color: #99999d; }
+
+.dots {
+  color: #000; }
+
+.pagen {
+  font-size: 11px;
+  color: #000; }
+
+.pagen, .dots, .fa-home {
+  cursor: pointer; }
+
+.pagen:hover, .dots:hover {
+  color: #43c5c5; }
+
+.cont2 {
+  display: inline-block;
+  align-items: left;
+  padding: 10px 0px 10px 20px; }
+
+.exten {
+  background-color: #f8f8f8; }
+
+.fa-home, .fa-angle-right, .pagen, .dots {
+  margin-right: 10px; }
+
+/*Fim da Segunda DIV*/
+/*-------------------------------------------------*/
+/*Come├ºo da Terceira DIV - Sport Type*/
+.cont3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 15px;
+  background-color: #BAEBE1; }
+
+.fa-map-signs, .fa-trophy {
+  color: #43c5c5;
+  font-size: 30px;
+  margin-right: 20px;
+  margin-left: 45px; }
+
+/*O "!important" foi usado porque de alguma maneira a fonte padr├úo do FontAwesome 4 estava barrando esta formata├º├úo que eu coloquei anteriormente*/
+.fa-puzzle-piece {
+  color: #43c5c5;
+  font-size: 30px !important;
+  margin-right: 20px; }
+
+.cont2esq {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.sport-type, .mode, .route {
+  grid: auto / auto auto;
+  display: grid; }
+
+.cable1 {
+  font-size: 11px;
+  color: #99999d; }
+
+.cable2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000; }
+
+/*-------------------------------------------------*/
+/*Fim do Header*/
+/*In├¡cio do Main------*/
+/*Inicio do Header da Tabela*/
+.header-tabela {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 31px;
+  margin: 0 10px; }
+
+.filtro {
+  outline: none;
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 4px;
+  width: 300px;
+  padding: 6px;
+  border: 1px solid grey; }
+
+/*Fim do Header da Tabela*/
+/*-------------------------------------------------*/
+/*In├¡cio do Corpo da tabela*/
+.users {
+  padding-left: 10px; }
+
+.tabela1 {
+  /*Esta ├⌐ a div da tabela*/
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  overflow-y: scroll;
+  margin: 0 20px 0 -1px;
+  padding: 0 0 0 12px; }
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: white; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  height: 50px;
+  text-align: left;
+  font-size: 12px; }
+
+th, td {
+  padding: 8px; }
+
+/*Aqui ├⌐ para dar uma escurecida nas linhas ├¡mpares da tabela*/
+tr:nth-child(even) {
+  background-color: #f8f8f8; }
+
+/*Aqui ├⌐ para a linha da tabela escurecer quando o mouse passa por cima*/
+tr:hover {
+  background-color: #e6e6e6; }
+
+.info-email, .info-city, .info-posts, .info-album {
+  color: #43c5c5; }
+
+/*Fazendo o Scroll da tabela com a thead fixa*/
+/*Fim do Corpo da Tabela*/
+/*-------------------------------------------------*/
+/*In├¡cio do Registration Form*/
+.fa-life-ring, .fa-heartbeat, .fa-smile {
+  color: #43c5c5;
+  font-size: 40px; }
+
+h4 {
+  color: #43c5c5;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0 0 0 0; }
+
+.opt {
+  float: right;
+  color: #e6e6e6; }
+
+.information-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 22px; }
+
+.caixa2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 30px; }
+
+.parag {
+  padding-left: 15px; }
+
+hr {
+  border-width: 0 0 1px 0;
+  color: #99999d;
+  margin: 20px 150px 40px 150px; }
+
+.regist {
+  padding: 40px 0 0 22px; }
+
+.regis {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  vertical-align: middle;
+  margin: 0 120px 0 120px; }
+
+.warn {
+  margin-bottom: 14;
+  margin-top: 0; }
+
+form {
+  width: 84%; }
+
+#username, #name, #email, #city {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px; }
+
+#username:focus, #name:focus, #email:focus, #city:focus {
+  border: 1px solid #43c5c5; }
+
+#ladoesq, #ladodir {
+  width: 400px;
+  display: inline-block; }
+
+#ladoesq {
+  float: left; }
+
+#ladodir {
+  float: right; }
+
+.p1, .p2, .p3, .p4 {
+  margin-top: 4px;
+  font-size: 9px; }
+
+.bolin {
+  margin-left: 0;
+  margin-right: 15px; }
+
+.ride {
+  position: relative;
+  margin-bottom: 0;
+  font-weight: bold; }
+
+/*Customiza├º├úo do radiobox-------------*/
+.choice {
+  display: inline-block;
+  position: relative;
+  padding-right: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/* Esconde o bot├úo radio padr├úo do navegador */
+.choice input {
+  opacity: 0;
+  cursor: pointer; }
+
+/* Criando um radiobox customizado*/
+.checkmark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #e6e6e6; }
+
+/* On mouse-over, add a lightgreen border color  */
+.choice:hover input ~ .checkmark {
+  border-color: #43c5c5; }
+
+/* When the radio button is checked, add a lightgreen border */
+.choice input:checked ~ .checkmark {
+  border-color: #43c5c5; }
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: relative;
+  display: none; }
+
+/* Show the indicator (dot/circle) when checked */
+.choice input:checked ~ .checkmark:after {
+  display: block; }
+
+/* Style the indicator (dot/circle) */
+.choice .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black; }
+
+/*------------------------------*/
+.gp2 {
+  padding-bottom: 14px; }
+
+.days {
+  margin: 0;
+  font-weight: bold;
+  padding-bottom: 5px; }
+
+/*Customiza├º├úo do checkbox--------------*/
+.choice2 {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 3px;
+  padding-top: 7px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  user-select: none; }
+
+/* Hide the browser's default checkbox */
+.choice2 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+/* Create a custom checkbox */
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6; }
+
+/* On mouse-over, add a lightgreen border */
+.choice2:hover input ~ .checkmark2 {
+  border-color: #43c5c5; }
+
+/* When the checkbox is checked, add a lightgreen border */
+.choice2 input:checked ~ .checkmark2 {
+  border-color: #43c5c5; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark2:after {
+  content: "";
+  position: relative;
+  display: none;
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px; }
+
+/* Show the checkmark when checked */
+.choice2 input:checked ~ .checkmark2:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.choice2 .checkmark2:after {
+  left: 9px;
+  top: 5px;
+  width: 4px;
+  height: 8px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg); }
+
+/*Fim do Registration Form*/
+/*-------------------------------------------------*/
+/*Estilizando os bot├╡es*/
+.buttonsform {
+  margin: 197px 170px 0 -406px;
+  padding-bottom: 100px;
+  float: left; }
+
+#save, #discard {
+  background-color: #e6e6e6;
+  color: #6b696a;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin: 5px; }
+
+#save:hover, #discard:hover {
+  background-color: #43c5c5;
+  color: #fff; }
+
+/*Lixeira*/
+.trash {
+  padding: 15px; }
+
+/*Colocando cores no texto de erros*/
+#mensagens-erro {
+  color: red; }
+
+/*Avisos embaixo dos inputs do form*/
+.p1, .p2, .p3, .p4 {
+  opacity: 0; }
+
+.username:focus-within .p1, .name:focus-within .p2, .email:focus-within .p3, .city:focus-within .p4 {
+  opacity: 1; }
+
+/*Esconder ├¡cone de trash e fazer ele aparecer com hover*/
+.fa-trash-alt {
+  opacity: 0;
+  font-size: 15px; }
+
+tr:hover .fa-trash-alt {
+  opacity: 1;
+  font-size: 15px;
+  cursor: pointer; }
+
+/*Classe para ajudar na remo├º├úo de linhas da tabela --- linha 493 do JavaScript*/
+.fadeOut {
+  opacity: 0;
+  transition: 0.5s; }
+
+/*# sourceMappingURL=index.css.map */
